@@ -1,4 +1,3 @@
-*Read this in other languages: [中文](README-cn.md), [日本](README-ja.md).*
 
 # Visual Recognition with Core ML
 
@@ -28,15 +27,6 @@ Identify common objects with a built-in Visual Recognition model. Images are cla
 
 [Source code](../master/Core%20ML%20Vision%20Simple/Core%20ML%20Vision%20Simple/ImageClassificationViewController.swift) for `ImageClassificationViewController`.
 
-## Running Core ML Vision Custom
-The second part of this project builds from the first part and trains a Visual Recognition model (also called a classifier) to identify common types of cables (HDMI, USB, etc.). Use the [Watson Swift SDK](https://github.com/watson-developer-cloud/swift-sdk) to download, manage, and execute the trained model. By using the Watson Swift SDK, you don't have to learn about the underlying Core ML framework.
-
-### Setting up Visual Recognition in Watson Studio
-1.  Log into [Watson Studio][watson_studio_visrec_tooling]. From this link you can create an IBM Cloud account, sign up for Watson Studio, or log in.
-1.  After you sign up or log in, you'll be on the Visual Recognition instance overview page in Watson Studio.
-
-    **Tip**: If you lose your way in any of the following steps, click the `IBM Watson` logo on the top left of the page to bring you to the the Watson Studio home page. From there you can access your Visual Recognition instance by clicking the **Launch tool** button next to the service under "Watson services".
-
 ### Training the model
 1.  In Watson Studio on the Visual Recognition instance overview page, click **Create Model** in the Custom box.
 1.  If a project is not yet associated with the Visual Recognition instance you created, a project is created. Name your project `Custom Core ML` and click **Create**.
@@ -58,15 +48,6 @@ The second part of this project builds from the first part and trains a Visual R
 1.  Copy the **Model ID** and paste it into the **classifierID** property in the [ImageClassificationViewController](../master/Core%20ML%20Vision%20Custom/Core%20ML%20Vision%20Custom/ImageClassificationViewController.swift) file.
 1.  Copy either your **api_key** or **apikey** and paste it into either the **api_key** or **apikey** property in the  [ImageClassificationViewController](../master/Core%20ML%20Vision%20Custom/Core%20ML%20Vision%20Custom/ImageClassificationViewController.swift) file.
 
-### Downloading the Watson Swift SDK
-Use the Cocoapods dependency manager to download and build the Watson Swift SDK.  The Watson Swift SDK can also be installed via [Carthage](https://github.com/watson-developer-cloud/swift-sdk#carthage) and [Swift Package Manager](https://github.com/watson-developer-cloud/swift-sdk#swift-package-manager).
-
-1.  Install [Cocoapods](https://cocoapods.org/).
-1.  Open a terminal window and navigate to the `Core ML Vision Custom` directory.
-1.  Run the following command to download and build the Watson Swift SDK:
-
-    ```bash
-    pod install
     ```
 
 **Tip:** Regularly download updates of the SDK so you stay in sync with any updates to this project.  If you have updated to a new version, you may need to run `pod repo update` before installing.
@@ -83,18 +64,6 @@ Use the Cocoapods dependency manager to download and build the Watson Swift SDK.
 
 [Source code](../master/Core%20ML%20Vision%20Custom/Core%20ML%20Vision%20Custom/ImageClassificationViewController.swift) for `ImageClassificationViewController`.
 
-## What to do next
-
-Add another Watson service to the custom project with the [Core ML Visual Recognition with Discovery][vizreq_with_discovery] project.
-
-## Resources
-
-- [Watson Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/)
-- [Watson Visual Recognition Tool][vizreq_tooling]
-- [Apple machine learning](https://developer.apple.com/machine-learning/)
-- [Core ML documentation](https://developer.apple.com/documentation/coreml)
-- [Watson Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
-- [IBM Cloud](https://cloud.ibm.com)
 
 [vizreq_with_discovery]: https://github.com/watson-developer-cloud/visual-recognition-with-discovery-coreml/
 [xcode_download]: https://developer.apple.com/xcode/downloads/
